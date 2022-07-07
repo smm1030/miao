@@ -5,6 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    p, h1 {
+      color: red;
+      font-size: 30px;
+    }
+
+  </style>
+  <a href="HTML.css"></a>
   </head>
   <body>
   <h1>lorem</h1>
@@ -13,7 +21,7 @@
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam porro adipisci unde optio sit maxime nihil mollitia consequuntur, enim dolorem explicabo accusantium? Optio nulla atque, ducimus illo aliquam a vitae?</p>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptate nihil dignissimos! Totam, quae. Laudantium impedit vel officia harum debitis ullam reiciendis, itaque ducimus fugiat dolorem quis. Explicabo, non eum.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quasi?</p>
-  <a href="https://www.jd.com/">在新窗口打开京东</a>
+  <a href="https://www.jd.com/" target="_blank">在新窗口打开京东</a>
   <a href="xxxxx@qq.com">点我发邮件</a>
   <a href="file:///D:/Users/smm/Desktop/%E4%BD%9C%E4%B8%9A/html-basic.html#dibu">跳到页面底部</a>
   <a href="file:///D:/Users/smm/Desktop/%E4%BD%9C%E4%B8%9A/aaaa" download>点我下载文件</a><br>
@@ -21,15 +29,16 @@
   <hr>
   <hr>
   <marquee behavior="" direction="">piao</marquee>
-  <p><em>这几种强调</em> <strong>有什么</strong> <b>区别</b>&lt; <i>这个？</i></p>
+  <p><em>这几种强调</em> <strong>有什么  区别</strong> &lt; <i>这个？</i></p>
   &lt;!-- 这段注释需要出现在页面里 -->
-  <br>
-  <br>
-    function a() { <br>
-      return 8 <br>
-    }
-  <br>
-  <br>
+
+  <pre>
+    <code>
+      function a() { <br>
+        return 8 <br>
+      }
+    </code>
+  </pre>
   <hr>
 
   <ul>
@@ -49,7 +58,6 @@
     <li>中学</li>
     <li>大学</li>
   </ul>
-
 
   <hr>
 
@@ -71,22 +79,14 @@
   <hr>
 
   <h1>Google搜索</h1>
-
-  <select name="" id="">
-    <option value="">idm</option>
-    <option value="">网课</option>
-    <option value="">科学上网</option>
-    <option value="">磁力</option>
-    <option value="">刷网课</option>
-    <option value="">字幕中文</option>
-  </select>
+  <input type="text" >在新窗口打开搜索结果
 
   <input type="submit" value="在新窗口打开搜索结果" target="https://www.google.com.hk/search?q=&ie=UTF-8&sourceid=UTF">
 
   <hr>
 
   <form action="">
-    个人信息调查表<br>
+    <p>个人信息调查表</p>
     性别<br>
     <input type="radio" value="male">男
     <input type="radio" value="female">女<br>
