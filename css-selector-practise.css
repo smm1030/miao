@@ -1,0 +1,62 @@
+body > :first-child {
+  color: red;
+}
+[tabindex="1"]:focus {
+ color: blue;
+}
+
+[tabindex="1"]:hover {
+ color: red;
+}
+[tabindex="1"]:active {
+ color: green;
+}
+.a.c span {
+  color: red;
+}
+.a.c span > :first-child {
+  color: green;
+}
+.a.c span > :last-child {
+  color: blue;
+}
+a:visited {
+  color: orange;
+}
+a:link {
+  color: pink;
+}
+a[href *="mailto:" i] {
+  color: blue;
+}
+a[href*="tel"] {
+  color: yellow;
+}
+a[href *="pdf" i] {
+  font-size: 30px;
+}
+.a04,.a05,.a06,.a07 {
+  color: red;
+}
+div.a ul li:nth-child(4),
+div.a ul li:nth-child(5),
+div.a ul li:nth-child(6),
+div.a ul li:nth-child(7) {
+  color: red;
+}
+div.b ul li:nth-child(-n+25) {
+  color: red;
+}
+div.b ul li:nth-child(n+65) {
+  color: green;
+}
+div.b ul li:nth-child(n+35):nth-child(-n+50) {
+  color: blue;
+}
+div.prime ul li:nth-child(2n+4),
+div.prime ul li:nth-child(3n+6),
+div.prime ul li:nth-child(5n+25),
+div.prime ul li:nth-child(7n+49)
+{
+  color: red;
+}
