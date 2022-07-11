@@ -17,14 +17,17 @@ h1 {
 2px 2px 0 rgb(128,128,128)
     ;
 }
-h1 > span {
+h1 span {
   color: blue;
 }
 h3 {
   color: white;
   font-size: 3em;
-  text-shadow: red 2px 2px 1px;
-
+  text-shadow: 0 0 4px red,
+              0 0 4px red,
+              0 0 4px red,
+              0 0 4px red,
+              0 0 4px red;
 
 }
 p[class=b] {
@@ -34,10 +37,12 @@ p[class=b] {
 }
 p input {
   font-size: 1em;
+  text-transform: uppercase;
 }
 h2 {
   font-variant: small-caps;
   text-transform: capitalize;
+  font-family: consolas, simsun;
 }
 p[class=a] {
   text-align:right;
