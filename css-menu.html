@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css-menu</title>
+  <style>
+
+
+    ul {
+      list-style: none;
+
+      margin: 0;
+      padding: 0;
+
+    }
+    .menu {
+      padding: .5em;
+    }
+    .menu > li {
+      display: inline-block;
+
+
+    }
+    .menu li {
+      position: relative;
+      white-space: nowrap;
+      padding: .5em;
+    }
+    .menu ul {
+      padding-top: .5em;
+      padding-bottom: .5em;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      display: none;
+      box-shadow: 0 0 5px #333;
+      border: .3em;
+    }
+    .menu li:hover > ul {
+      display: block;
+    }
+    .menu ul ul {
+      left: 100%;
+      top: -.5em;
+    }
+    .menu,
+    .menu ul {
+      background-color: #3c3c3c;
+      color: #c4c4c4;
+    }
+    .menu li:hover {
+      background-color: green;
+    }
+    .menu li li {
+      padding: 0 100px 0 10px;
+    }
+    .menu li li > span {
+      position: absolute;
+      right: 10px;
+      top: 0;
+
+    }
+    .menu li > hr {
+      margin-left: -10px;
+      margin-right: -100px;
+      bottom: none;
+      border-top: 1px solid #606060;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+
+    <ul class="menu">
+      <li>文件
+        <ul>
+
+
+          <li>打开文件<span>Ctrl+O</span></li>
+          <li>
+            <hr>
+          </li>
+          <li>打开文件夹</li>
+          <li>保存</li>
+          <li>另存为</li>
+          <li>首选项
+            <ul>
+
+              <li>设置</li>
+              <li>颜色主题</li>
+              <li>文件图标主题</li>
+              <li>扩展</li>
+              <li>键盘快捷方式</li>
+            </ul>
+        </ul>
+      </li>
+
+      <li>编辑
+        <ul>
+
+
+          <li>打开文件<span>Ctrl+O</span></li>
+          <li>
+            <hr>
+          </li>
+          <li>打开文件夹</li>
+          <li>保存</li>
+          <li>另存为</li>
+          <li>首选项
+            <ul>
+
+              <li>设置</li>
+              <li>颜色主题</li>
+              <li>文件图标主题</li>
+              <li>扩展</li>
+              <li>键盘快捷方式</li>
+            </ul>
+        </ul>
+      </li>
+
+      <li>选择
+        <ul>
+
+
+          <li>打开文件<span>Ctrl+O</span></li>
+          <li>
+            <hr>
+          </li>
+          <li>打开文件夹</li>
+          <li>保存</li>
+          <li>另存为</li>
+          <li>首选项
+            <ul>
+
+              <li>设置</li>
+              <li>颜色主题</li>
+              <li>文件图标主题</li>
+              <li>扩展</li>
+              <li>键盘快捷方式</li>
+            </ul>
+        </ul>
+      </li>
+      <li>查看
+        <ul>
+
+
+          <li>打开文件<span>Ctrl+O</span></li>
+          <li>
+            <hr>
+          </li>
+          <li>打开文件夹</li>
+          <li>保存</li>
+          <li>另存为</li>
+          <li>首选项
+            <ul>
+
+              <li>设置</li>
+              <li>颜色主题</li>
+              <li>文件图标主题</li>
+              <li>扩展</li>
+              <li>键盘快捷方式</li>
+            </ul>
+        </ul>
+      </li>
+
+
+
+
+      <li>退出</li>
+
+    </ul>
+
+
+</body>
+</html>
