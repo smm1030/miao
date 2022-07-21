@@ -16,6 +16,7 @@
     section {
       font-size: 16px;
       margin: 0;
+      padding: 0;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap-reverse;
@@ -31,17 +32,19 @@
     .b {
       width: 150px;
       background-color: green;
-      height: 100%-100px;
+      height: calc(100vh - 100px);
+      flex-wrap: wrap;
 
       overflow: auto;
 
     }
     .a {
       background-color: blue;
-      height: 100%-100px;
+      height: calc(100vh - 100px);
       width: 300px;
       flex-grow: 1;
-      padding: 10px;
+      
+      flex-wrap: wrap;
 
       overflow: auto;
 
