@@ -8,19 +8,17 @@
   <style>
     html, body {
       height: 100%;
-    }
-    body {
       margin: 0;
-      font-size: 0;
     }
+
     section {
-      font-size: 16px;
-      margin: 0;
-      padding: 0;
+      height: 100%;
+
+      overflow: auto;
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap-reverse;
-      align-content: stretch;
+
+
 
 
     }
@@ -28,11 +26,12 @@
       background-color: aquamarine;
       height: 100px;
       width: 100%;
+      flex: none;
     }
     .b {
       width: 150px;
       background-color: green;
-      height: calc(100vh - 100px);
+      align-content: flex-end;
       flex-wrap: wrap;
 
       overflow: auto;
@@ -40,10 +39,10 @@
     }
     .a {
       background-color: blue;
-      height: calc(100vh - 100px);
-      width: 300px;
-      flex-grow: 1;
-      
+      flex: 1;
+
+
+
       flex-wrap: wrap;
 
       overflow: auto;
@@ -53,7 +52,9 @@
   </style>
 </head>
 <body>
+  <div class="c"></div>
   <section>
+
     <div class="b">
       <ul><li></li>
       <li></li>
@@ -87,8 +88,7 @@
       <li></li>
     </ul>
     </div>
-    <div class="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias deserunt quas repellendus sit harum ab accusantium a neque, rerum illo delectus et rem corrupti odio, amet dolorem, labore dolor nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi officia, suscipit quod mollitia, excepturi dignissimos sapiente quae ipsum dicta minus ad quisquam commodi esse saepe possimus accusamus velit doloribus optio nemo? Excepturi aut accusantium exercitationem quasi soluta, unde quae, facilis maiores sequi, culpa praesentium beatae numquam repudiandae saepe dolorem neque officia corporis reiciendis nemo. Iure accusantium officiis nam reiciendis tenetur dolor, ex perspiciatis? Accusantium animi eum praesentium at dolorem mollitia minus, harum beatae fuga suscipit, assumenda numquam maiores quod facere similique nemo odio? Accusantium voluptatibus minus, eligendi deleniti adipisci, blanditiis necessitatibus fuga fugiat tempora dignissimos animi qui laborum facere aspernatur!pisicing elit. Modi officia, suscipit quod mollitia, excepturi dignissimos sapiente quae ipsum dicta minus ad quisquam commodi esse saepe possimus accusamus velit doloribus optio nemo? Excepturi auts sapiente quae ipsum dicta minus ad quisquam commodi esse saepe possimus accusamus velit doloribus optio nemo? Excepturi aut accusantiumsimilique nemo odio? Accusantium voluptatibus minus, eligendi deleniti adipisci, blanditiis necessitatibus fuga fugiat tempora dignissimos animi qui laborum facere aspernatur!pisicing elit. Modi officia, suscipit quod mollitia, excepturi dignissimos sapiente quae ipsum dicta minus ad quisquam commodi esse saepe possimus accusamus velit doloribus optio nemo? Excepturi auts sapiente quae ipsum dicta minus ad quisquam commodi esse saepe possimus accusamus velit doloribus optio nemo? Excepturi aut accusantium similique nemo odio? Accusantium voluptatibus minus, eligendi deleniti adipisci, blanditiis necessitatibus fuga fugiat tempora dignissimos animi qui laborum facere aspernatur!pisicing elit. Modi officia, suscipit quod mollitia, excepturi dignissimos sapiente quae ipsum dicta minus ad quisquam commodi esse saepe possimus accusamus velit doloribus optio nemo? Excepturi auts sapiente quae ipsum dicta minus ad quisquam commodi esse saepe possimus accusamus velit doloribus optio nemo? Excepturi aut accusantium</div>
-    <div class="c"></div>
+    <div class="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias deserunt quas repellendus sit harum ab accusantium a neque, rerum illo delectus et rem corrupti odio, amet dolorem, labore dolor nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi officia, suscipit quod mollitia, excepturi dignissimos sapiente quae ipsum dicta minus ad quisquam commodi esse saepe possimus accusamus velit doloribus optio nemo? Excepturi aut accusantium exercitationem quasi soluta, unde quae, facilis maiores sequi, culpa praesentium beatae numquam repudiandae saepe dolorem neque officia corporis reiciendis nemo. Iure accusantium officiis nam reiciendis tenetur dolor, ex perspiciatis? Accusantium animi eum praesentium at dolorem mollitia minus, harum beatae fuga suscipit, assumenda numquam maiores quod facere similique nemo odio? Accusantium voluptatibus minus, eligendi deleniti adipisci, blanditiis necessitatibus fuga fugiat tempora dignissimos animi qui laborum facere aspernatur!pisicing elit. Modi officia, suscipit quod mollitia, excepturi dignissimos sapiente quae ipsum dicta minus ad quisquam commodi esse saepe possimus accusamus velit doloribus optio nemo? Excepturi auts sapiente quae ipsum dicta minus ad quisquam commodi esse saepe possimus accusamus velit doloribus optio nemo? Excepturi aut accusantiumsimilique nemo odio? Accusantium voluptatibus minus, eligendi deleniti adipisci, blanditiis necessitatibus fuga fugiat tempora dignissimos animi qui laborum facere aspernatur!pisicing elit. Modi officia, suscipit quod mollitia, excepturi dignissimos sapiente quae ipsum dicta minus ad quisquam commodi esse saepe possimus accusamus velit doloribus optio nemo? Excepturi auts sapiente quae ipsum dicta minus ad quisquam commodi esse saepe possimus accusamus velit doloribus optio nemo? Excepturi aut accusantium similique nemo odio? Accusantium voluptatibus minus, eligendi deleniti adipisci, blanditiis necessitatibus fuga fugiat tempora dignissimos animi qui laborum facere aspernatur!pisicing elit. Modi officia, suscipit quod mollitia, excepturi dignissimos sapiente quae ipsum dicta minus ad quisquam commodi esse saepe possimus accusamus velit doloribus optio nemo? Excepturi auts sapiente quae ipsum dicta minus ad quisquam commodi esse saepe possimus accusamus velit doloribus optio nemo? Excepturi aut accusantium Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores debitis, quasi architecto veritatis, eius quis recusandae corrupti quae explicabo similique accusantium eaque. Delectus temporibus doloribus nihil quasi ex non qui libero nisi adipisci neque nobis error quisquam tempore, sequi hic eum possimus. Aliquid facere odit iusto numquam fugit, voluptatibus quis perspiciatis magni reiciendis nulla. Perspiciatis repudiandae aliquam eum ratione minus iure, est odit. Distinctio similique nesciunt, accusantium accusamus unde nihil architecto ut quo officia repudiandae iste quaerat optio recusandae consectetur deleniti consequuntur omnis. Quis sapiente explicabo pariatur aliquam maiores. Repudiandae voluptas cumque necessitatibus culpa ipsam sed voluptates veritatis soluta modi.</div>
   </section>
 
 </body>
