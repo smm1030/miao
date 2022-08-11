@@ -1,6 +1,7 @@
 
 <head>
 <script type="x" id="ch0103/01">
+
   var a = Number(prompt())
   var b = Number(prompt())
   var c = a + b
@@ -268,49 +269,24 @@
 
 <script type="x" id="ch0104/09">
   var n = Number(prompt())
-  if (n % 3 !== 0 && n % 5 !== 0 && n % 7 !== 0)
+  if (n % 3 !== 0 && n % 5 !== 0 && n % 7 !== 0) {
+      console.log('n')
+    } else if (n % 3 == 0 && n % 5 == 0 && n % 7 == 0)
+      {console.log('3 5 7')
+    } else if (n % 3 == 0 && n % 5 == 0) {
+      console.log('3 5')
+    } else if (n % 3 == 0 && n % 7 == 0) {
+      console.log('3 7')
+    } else if (n % 5 == 0 && n % 7 == 0) {
+      console.log('5 7')
+    } else if (n % 3 == 0) {
+      console.log(3)
+    } else if (n % 5 == 0) {
+      console.log(5)
+    } else {
+      console.log(7)
+    }
 
-    console.log('n')
-
-  else
-  {
-    if (n % 3 == 0 && n % 5 == 0 && n % 7 == 0)
-
-      console.log('3 5 7')
-
-    else {
-      if (n % 3 == 0 && n % 5 == 0)
-        console.log('3 5')
-
-      else {
-        if (n % 3 == 0 && n % 7 == 0)
-          console.log('3 7')
-
-
-        else {
-          if (n % 5 == 0 && n % 7 == 0)
-            console.log('5 7')
-
-
-          else {
-            if (n % 3 == 0)
-              console.log(3)
-
-            else {
-              if (n % 5 == 0)
-                console.log(5)
-
-              else {
-                console.log(7)
-                   }
-                 }
-
-               }
-
-             }
-           }
-         }
-  }
 </script>
 
 <script type="x" id="ch0104/10">
@@ -492,6 +468,464 @@
       console.log(a)
 
 </script>
+
+
+<script type="x" id="ch0105/01">
+  var n = Number(prompt())
+  var total = 0
+  var counter = 1
+  while (counter <= n) {
+    var age = Number(prompt('请输入第' + counter + '个人的年龄：'))
+    total = total + age
+    counter = counter + 1
+  }
+  var average = total / n
+  console.log(average.toFixed(2))
+</script>
+
+<script type="x" id="ch0105/02">
+  var n = 12
+  var counter = 1
+  var total = 0
+  while (counter <= n) {
+    var remain = Number(prompt('请输入第' + counter + '月的结余：'))
+    total = total + remain
+    counter = counter + 1
+  }
+  var average =total / n
+  console.log('$' + average.toFixed(2))
+</script>
+
+<script type="x" id="ch0105/03">
+  var n = Number(prompt())
+  var total = 0
+  var counter = 1
+  while (counter <= n) {
+    var nn = Number(prompt('请输入第' + counter + '个数：'))
+    total = total + nn
+    counter = counter + 1
+  }
+  var average = total / n
+  console.log(average.toFixed(4))
+</script>
+
+<script type="x" id="ch0105/04">
+  var n = Number(prompt())
+  var total = 0
+  var counter = 1
+  while (counter <= n) {
+    var nn = Number(prompt('请输入第' + counter + '个数：'))
+    total = total + nn
+    counter = counter + 1
+  }
+  var average = total / n
+  console.log(total, average.toFixed(5))
+</script>
+
+<script type="x" id="ch0105/05">
+  var n = Number(prompt())
+  var max = 0
+  var counter = 1
+  while (counter <= n) {
+    var score = Number(prompt())
+    if (score > max) {
+      max = score
+    }
+    counter = counter + 1
+
+  }
+  console.log(max)
+</script>
+
+<script type="x" id="ch0105/06">
+  var n = Number(prompt())
+  var max = 0
+  var min = 0
+  var counter = 1
+  while (counter <= n) {
+    var score = Number(prompt())
+
+    if (score >= max) {
+      max =  score
+    }
+    if (min >= score) {
+
+      min = min + score
+    }
+    counter = counter + 1
+  }
+
+  console.log(max - min)
+</script>
+
+<script type="x" id="ch0105/07">
+  var n = Number(prompt())
+  var tjin = 0
+  var tyin = 0
+  var ttong = 0
+  var total = 0
+  var counter = 1
+  while (counter <= n) {
+    var jin = Number(prompt('第' + counter + '天金牌数：'))
+    var yin = Number(prompt('第' + counter + '天银牌数：'))
+    var tong = Number(prompt('第' + counter + '天同牌数：'))
+    tjin = tjin + jin
+    tyin = tyin + yin
+    ttong = ttong + tong
+    counter = counter + 1
+  }
+  total = total + tjin + tyin +ttong
+  console.log(tjin, tyin, ttong, total)
+</script>
+
+<script type="x" id="ch0105/08">
+  var n = Number(prompt())
+  var count = 1
+  var jiaohe = 0
+  while (count < n) {
+    var jiao = Number(prompt('第' + count + '个角：'))
+    jiaohe = jiaohe + jiao
+    count = count + 1
+  }
+  console.log((n - 2) * 180 - jiaohe)
+</script>
+
+<script type="x" id="ch0105/09">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var total = 0
+  if (m % 2 == 0) {
+    m = m + 1
+  }
+  var count = m
+  while (count <= n) {
+    total = total + count
+    count = count + 2
+  }
+  console.log(total)
+</script>
+
+<script type="x" id="ch0105/10">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var total = 0
+  var yu = m % 17
+  if (yu !== 0) {
+    m = m + 17 - yu
+  }
+  var count = m
+  while (count <= n) {
+    total = total + count
+    count = count + 17
+  }
+  console.log(total)
+</script>
+
+<script type="x" id="ch0105/11">
+  var n = Number(prompt())
+  var one = 0
+  var five = 0
+  var ten = 0
+  var count = 1
+  while (count <= n) {
+    var shu = Number(prompt('第' + '个数：'))
+    if (shu == 1) {
+      one = one + 1
+    }
+    if (shu == 5) {
+      five = five + 1
+    }
+    if (shu == 1) {
+      ten = ten + 1
+    }
+    count = count + 1
+  }
+  console.log(one)
+  console.log(five)
+  console.log(ten)
+</script>
+
+<script type="x" id="ch0105/12">
+  var n = Number(prompt())
+  var m = Number(prompt())
+  var nm = 0
+  var count = 1
+  while (count <= n) {
+    var nn = Number(prompt('第' + count + '个数：'))
+    if (nn == m ) {
+      nm = nm + 1
+    }
+    count = count + 1
+  }
+  console.log(nm)
+
+</script>
+
+<script type="x" id="ch0105/13">
+  var a = Number(prompt())
+  var n = Number(prompt())
+  var count = 1
+  var result = 1
+  while (count <= n) {
+     result = result * a
+     count = count + 1
+  }
+  console.log(result)
+
+</script>
+
+<script type="x" id="ch0105/14">
+  var x = Number(prompt())
+  var n = Number(prompt())
+  var count = 1
+  var result = x
+  while (count <= n) {
+    result = result * 1.001
+    count = count + 1
+  }
+  console.log(result.toFixed(4))
+</script>
+
+<script type="x" id="ch0105/15">
+  var R = Number(prompt())
+  var M = Number(prompt())
+  var Y = Number(prompt())
+  var count = 1
+  var result = M
+  while (count <= Y ) {
+    result = result * 1.05
+    count = count + 1
+  }
+  console.log(parseInt(result))
+</script>
+
+<script type="x" id="ch0105/16">
+  var N = Number(prompt())
+  var K = Number(prompt())
+  var M = 1
+  while (M * N < 200 * (( K / 100 + 1) ** (M-1))) {
+    M = M +1
+  }
+  if (M < 20) {
+    console.log(M)
+  } else {
+    console.log('Impossible')
+  }
+</script>
+
+<script type="x" id="ch0105/17">
+  var k = Number(prompt())
+  var a = 1
+  var b = 1
+  var c = 2
+
+  var count = 3
+  while (count <= k) {
+    var d = b
+    b = c
+    c = c + d
+    count = count + 1
+  }
+  if (k <= 2) {
+    console.log(1)
+  } else {
+    console.log(c-d)
+  }
+
+</script>
+
+<script type="x" id="ch0105/18">
+  var n = Number(prompt())
+  var xtotal = Number(prompt())
+  var xe = Number(prompt())
+  var x = xe /xtotal
+  var y
+  var count = 1
+  while (count <= (n-1)) {
+    var ytotal = Number(prompt())
+    var ye = Number(prompt())
+    y = ye / ytotal
+    count = count + 1
+    if (y - x > 0.05) {
+      console.log('better')
+    } else if (x - y > 0.05) {
+      console.log('worse')
+    } else {
+      console.log('same')
+    }
+  }
+</script>
+
+<script type="x" id="ch0105/19">
+  var n = Number(prompt())
+  var count = 1
+  var all = 0
+  while (count <= n) {
+  var x = Number(prompt())
+  var y = Number(prompt())
+  var num = Number(prompt())
+  var l = Math.sqrt(x * x + y * y)
+  var s = l / 25 + 1.5 * num
+  all = all + s
+  count = count + 1
+  }
+  console.log(Math.ceil(all))
+</script>
+
+<script type="x" id="ch0105/20">
+  var h = Number(prompt())
+  var l = h
+  var hn = h
+  var count = 2
+  while (count <= 10) {
+    hn = hn * 0.5
+    l = l + 2 * hn
+    count = count + 1
+  }
+  console.log(l.toFixed(4))
+  console.log((hn / 2).toFixed(7))
+</script>
+
+<script type="x" id="ch0105/21">
+  var n = Number(prompt())
+  while(n !== 1) {
+    if (n % 2 == 0) {
+      n = n / 2
+      console.log(2 * n + '/' + '2=' + n)
+    }
+    if (n % 2 == 1 && n !== 1) {
+      n = 3 * n + 1
+      console.log((n - 1) / 3 + '*3+1=' + n)
+    }
+  }
+  if (n == 1) {
+    console.log('End')
+  }
+</script>
+
+
+
+
+<script type="x" id="ch0105/22">
+  var yusuan = Number(prompt())
+  var input = 300
+  var save = (300 - yusuan) - ( (300 - yusuan) % 100)
+  var shengyu = 300 - save - yusuan
+  var month = 2
+  var totalsave = save
+  while (month <= 12) {
+  var ys = Number(prompt())
+  input = 300 + shengyu
+  save = (input - ys ) - (input - ys ) % 100
+  totalsave = totalsave + save
+  shengyu = input - save - ys
+  month = month + 1
+  if (input < ys) {
+    console.log(-(month - 1))
+    month = 13
+  }
+
+  }
+  if (input > ys ) {
+    console.log(totalsave * 1.2 + shengyu)
+  }
+</script>
+
+<script type="x" id="ch0105/23">
+
+</script>
+
+<script type="x" id="ch0105/24">
+
+</script>
+
+<script type="x" id="ch0105/25">
+
+</script>
+
+<script type="x" id="ch0105/26">
+
+</script>
+
+
+
+<script type="x" id="ch0105/27">
+
+</script>
+
+<script type="x" id="ch0105/28">
+
+</script>
+
+<script type="x" id="ch0105/29">
+
+</script>
+
+<script type="x" id="ch0105/30">
+
+</script>
+
+<script type="x" id="ch0105/31">
+
+</script>
+
+<script type="x" id="ch0105/32">
+
+</script>
+
+<script type="x" id="ch0105/33">
+
+</script>
+
+<script type="x" id="ch0105/34">
+
+</script>
+
+<script type="x" id="ch0105/35">
+
+</script>
+
+<script type="x" id="ch0105/36">
+
+</script>
+
+<script type="x" id="ch0105/37">
+
+</script>
+
+<script type="x" id="ch0105/38">
+
+</script>
+
+<script type="x" id="ch0105/39">
+
+</script>
+
+<script type="x" id="ch0105/40">
+
+</script>
+
+<script type="x" id="ch0105/41">
+
+</script>
+
+<script type="x" id="ch0105/42">
+
+</script>
+
+<script type="x" id="ch0105/43">
+
+</script>
+
+<script type="x" id="ch0105/44">
+
+</script>
+
+<script type="x" id="ch0105/45">
+
+</script>
+
+
 
 
 </head>
