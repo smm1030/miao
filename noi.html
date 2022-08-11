@@ -814,17 +814,16 @@
   var month = 2
   var totalsave = save
   while (month <= 12) {
-  var ys = Number(prompt())
-  input = 300 + shengyu
-  save = (input - ys ) - (input - ys ) % 100
-  totalsave = totalsave + save
-  shengyu = input - save - ys
-  month = month + 1
-  if (input < ys) {
-    console.log(-(month - 1))
-    month = 13
-  }
-
+    var ys = Number(prompt())
+    input = 300 + shengyu
+    save = (input - ys ) - (input - ys ) % 100
+    totalsave = totalsave + save
+    shengyu = input - save - ys
+    month = month + 1
+    if (input < ys) {
+      console.log(-(month - 1))
+      month = 13
+    }
   }
   if (input > ys ) {
     console.log(totalsave * 1.2 + shengyu)
