@@ -414,7 +414,7 @@
   if (c !== '+' && c !== '-' && c !== '*' && c !== '/' )
     console.log('Invalid operator')
     else if (c === '/' && b == 0)
-      console.log('Divided by zero')
+      console.log('Divided by zero!')
       else
       console.log(d)
 </script>
@@ -922,14 +922,33 @@
 
 <script type="x" id="ch0105/29">
   var N = Number(prompt())
-  var strN = n.toString()
-  var len = strn.length
-  console.log('-')
-  for (i = 0 ; i < l ;i = i + 1) {
-    var result = strn.charCodeAt((len-1-i)) - 48
-    if (strn.charCodeAt((len-1)) == 48) {
-
-      console.log(result)
+  var strN = N.toString()
+  var len = strN.length
+  if (N == 0) {
+    console.log(0)
+  }
+  if (N > 0) {
+    for (i = 0 ; i <= len - 1 ; i ++) {
+      var befResult = strN.charAt(len - 1 - i)
+      var cobine = ''
+      cobine = cobine + befResult
+      console.log(cobine)
+    }
+  }
+  if ( N < 0) {
+    for (j = 0 ; j <= len - 1 ; j++) {
+      var befResult2 = strN.charAt(len - 1 - j)
+      if (j == 0) {
+        console.log(strN.charAt(0))
+      }
+      if (j == len && strN.charAt(len - 1) == 0) {
+        console.log('')
+      } else {
+      console.log(befResult2)
+      }
+      if (j > 0 && j < (len - 1)) {
+        console.log(befResult2)
+      }
     }
   }
 </script>
@@ -960,7 +979,21 @@
 </script>
 
 <script type="x" id="ch0105/32">
+  debugger
+  var n = Number(prompt())
+  var p = 1
+  var q = 1
+  var an
+  var sum = 0
+  for (i = 0 ; i < n; i++) {
+    var remain = q
+    q = p + q
+    p = remain
+    an = q / p
+    sum = sum + an
 
+  }
+  console.log((sum).toFixed(4))
 </script>
 
 <script type="x" id="ch0105/33">
