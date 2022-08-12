@@ -831,14 +831,50 @@
 </script>
 
 <script type="x" id="ch0105/23">
-
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var count = 0
+  for (i = 0 ; i < n ; i = i + 1) {
+    var num = Number(prompt())
+    m = m - num
+    if (m > num ) {
+      count = count + 1
+    }
+  }
+  console.log(count)
 </script>
 
 <script type="x" id="ch0105/24">
-
+  var n = Number(prompt())
+  var normal = 0
+  for (i = 0 ; i < n ; i = i + 1) {
+  var shou = Number(prompt())
+  var shu = Number(prompt())
+  if (shou >= 90 && shou <= 140 && shu >= 60 && shu <= 90) {
+      normal = normal + 1
+    } else {
+      normal = normal - 1
+    }
+  }
+  console.log(normal)
 </script>
 
-<script type="x" id="ch0105/25">
+<script type="" id="ch0105/25">
+
+  for (var i = 56 ; i <= 399 ; i = i + 1) {
+
+    var seven3 = i % 7
+    var seven2 = (i % 49 - seven3) / 7
+    var seven1 = Math.floor(i / 49)
+    var nine3 = i % 9
+    var nine2 = (i % 81 - nine3) / 9
+    var nine1 = Math.floor(i / 81)
+    if (seven3 == nine1 && seven2 == nine2 && seven1 == nine3) {
+      console.log(i)
+      console.log('' + seven1 + seven2 + seven3)
+      console.log('' + nine1 + nine2 + nine3)
+    }
+  }
 
 </script>
 
