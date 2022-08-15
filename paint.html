@@ -123,15 +123,17 @@
     }
   }  //实心矩形
 
-  // for (x = 200 ; x <= 300 ;x++) {
-  //   for (y = 150 ; x <= 250 ;y++) {
-  //     if ((x - 250) ** 2 + (y - 200) ** 2 == 50 ** 2)
-  //     dot(x, y)
-  //   }
-  // }
+  for (x = 200 ; x <= 300 ;x++) {
+    var r = 50 * 50 - (x - 250) * (x - 250)
+    var delta = 400 * 400 - 4 * (200 * 200 -r)
+     var y1 = (400 + Math.sqrt(delta)) / 2
+     var y2 = (400 - Math.sqrt(delta)) / 2
+    dot(x, y1)
+    dot(x, y2)
+  }
 
   for (x = 100 ; x <= 300 ;x++) {
-    var y
+
     y = 1 * (Math.sin((x - 200 )) + 300)
     dot(x,y)
   }
