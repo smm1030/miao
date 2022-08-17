@@ -1301,11 +1301,11 @@
 
 </script>
 
-<script type="" id="weekday">
+<script type="x" id="weekday">
   var y = +prompt()
   var m = +prompt()
   var n = y % 400
-  var r
+  var r //闰年为1，平年为0
   var sum = 365 * (n - 1) + Math.floor((n - 1) / 4) - Math.floor((n - 1) / 100) // n-1年天数
   if (n == 0 || (n % 4 == 0 && n % 100 !== 0)) {
     r = 1
@@ -1525,7 +1525,7 @@
     }
 </script>
 
-<script type="x" id="lcf&lcm">
+<script type="" id="lcf&lcm">
   var n1 = +prompt()
   var n2 = +prompt()
   var bigger
@@ -1540,29 +1540,65 @@
     bigger = n2
     smaller = n1
   }
-  for (i = smaller ; i > 0 ; i -- ) {
-    if (bigger % i == 0 && smaller % i == 0) {
-      yueMax = i
-      console.log(yueMax)
-      break
-    }
+  // for (i = smaller ; i > 0 ; i -- ) {
+  //   if (bigger % i == 0 && smaller % i == 0) {
+  //     yueMax = i
+  //     console.log(yueMax)
+  //     break
+  //   }
+  // }
+  // for (j = 1 ; ; j ++) {
+  //   if((bigger * j ) % smaller == 0) {
+  //     beiMin = bigger * j
+  //     console.log(beiMin)
+  //     break
+  //   }
+  // }
+
+  while (bigger % smaller !== 0) {
+    var yu = bigger % smaller
+    bigger = smaller
+    smaller = yu
   }
-  for (j = 1 ; ; j ++) {
-    if((bigger * j ) % smaller == 0) {
-      beiMin = bigger * j
-      console.log(beiMin)
-      break
-    }
-  }
+  yueMax = smaller
+  console.log(yueMax)
+  beiMin = n1 * n2 / yueMax
+  console.log(beiMin)
+
 </script>
 
 <script type="x" id="sqrt">
   var n = +prompt()
   var i = 0
+  var result
+/*
   while (i * i <= n) {
     i = i + 0.0001
   }
   console.log((i - 0.0001).toFixed(3))
+*/
+
+  for (i = 0; i * i <= n; ) {
+    if (i * i == n) {
+      console.log(i.toFixed(3))
+    }
+    i = i + 1
+  }
+  var smaller = i - 1
+  var bigger = i
+  var mid = (smaller + bigger) / 2
+  while (bigger - smaller >= 0.0001 ) {
+    if (mid * mid > n) {
+      bigger = mid
+      mid = (bigger + smaller) / 2
+    } else if (mid * mid < n) {
+      smaller = mid
+      mid = (bigger + smaller) / 2
+    }
+    
+  }
+  result = mid.toFixed(3)
+  console.log(result)
 </script>
 
 
