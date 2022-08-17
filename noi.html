@@ -1317,7 +1317,7 @@
     for (i = 2 ; i <= (N / 2) ; i ++) {
       if (N % i == 0) {
 
-        sum = sum + i 
+        sum = sum + i
       }
     }
     if (sum == N) {
@@ -1328,7 +1328,7 @@
   }
 </script>
 
-<script type="" id="complete-numbers">
+<script type="x" id="complete-numbers">
   for (i = 6 ; i < 1000 ; i = i + 2) {
     var I = i.toString()
     var len = I.length
@@ -1387,12 +1387,32 @@
   }
 </script>
 
-<script type="x" id="itoa">
+<script type="x" id="itob">
   var n = +prompt()
-  var i = 0
-  for (var x = 10 ** i ;x <= n;i ++) {
+  var count = 0
+  var result = ''
 
-  }
+    // 将x拆解为其每位上的数
+    if (n > 0) {
+
+      while(n > 0) {
+        var d = n % 10
+        result =d + result
+        n = (n - d) / 10
+      }
+      console.log(result)
+    }
+    else if (n < 0) {
+      n = -n
+      while(n > 0) {
+        var d = n % 10
+        result =d + result
+        n = (n - d) / 10
+      }
+      console.log('-' + result)
+    } else {
+      console.log('0')
+    }
 </script>
 
 <script type="x" id="lcf&lcm">
