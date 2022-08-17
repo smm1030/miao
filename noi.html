@@ -1314,10 +1314,10 @@
   if (n.charAt(len - 1) !== '6' && n.charAt(len - 1) !== '8') {
     console.log('NO')
   } else {
-    for (i = 2 ; i < (N / 2) ; i ++) {
+    for (i = 2 ; i <= (N / 2) ; i ++) {
       if (N % i == 0) {
-        var ni = N / i
-        sum = sum + i + ni
+
+        sum = sum + i 
       }
     }
     if (sum == N) {
@@ -1328,22 +1328,29 @@
   }
 </script>
 
-<script type="x" id="complete-numbers">
+<script type="" id="complete-numbers">
   for (i = 6 ; i < 1000 ; i = i + 2) {
     var I = i.toString()
     var len = I.length
     var sum = 1
-    if (I.charAt(len - 1) == '6' || I.charAt(len - 1) == '8') {
-      for (j = 2 ; j < (i / 2) ; j ++) {
-        if (i % j == 0) {
-          var ij = i / j
-          sum = sum + j + ij
+    var flag = true
+    if (I.charAt(len - 1) !== '6' && I.charAt(len - 1) !== '8') {
+      flag = false
+      }
+      else {
+        for (j = 2 ; j <= (i / 2) ; j ++) {
+          if (i % j == 0) {
+
+            sum = sum + j
+          }
         }
+        if (sum == i) {
+          console.log(i)
+        } else {
+          flag = false
+        }
+
       }
-      if (sum == i) {
-        console.log(sum)
-      }
-    }
   }
 </script>
 
