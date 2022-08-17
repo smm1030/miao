@@ -1301,7 +1301,117 @@
 
 </script>
 
-<script type="x" id="weekday">
+<script type="" id="weekday">
+  var y = +prompt()
+  var m = +prompt()
+  var n = y % 400
+  var r
+  var sum = 365 * (n - 1) + Math.floor((n - 1) / 4) - Math.floor((n - 1) / 100) // n-1年天数
+  if (n == 0 || (n % 4 == 0 && n % 100 !== 0)) {
+    r = 1
+    switch (m) {
+      case 1:
+        sum = sum + 1;
+        break;
+      case 2:
+        sum = sum + 1 + 31;
+        break;
+      case 3:
+        sum = sum + 1 + 31 + 28 + r;
+        break;
+      case 4:
+        sum = sum + 1 + 31 + 28 + r + 31;
+        break;
+      case 5:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 ;
+        break;
+      case 6:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 + 31;
+        break;
+      case 7:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 + 31 + 30;
+        break;
+      case 8:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 + 31 + 30 + 31;
+        break;
+      case 9:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 + 31 + 30 + 31 + 31;
+        break;
+      case 10:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 + 31 + 30 + 31 + 31 + 30;
+        break;
+      case 11:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31;
+        break;
+      case 12:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 ;
+        break;
+    }
+  } else {
+    r = 0
+    switch (m) {
+      case 1:
+        sum = sum + 1;
+        break;
+      case 2:
+        sum = sum + 1 + 31;
+        break;
+      case 3:
+        sum = sum + 1 + 31 + 28 + r;
+        break;
+      case 4:
+        sum = sum + 1 + 31 + 28 + r + 31;
+        break;
+      case 5:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 ;
+        break;
+      case 6:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 + 31;
+        break;
+      case 7:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 + 31 + 30;
+        break;
+      case 8:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 + 31 + 30 + 31;
+        break;
+      case 9:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 + 31 + 30 + 31 + 31;
+        break;
+      case 10:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 + 31 + 30 + 31 + 31 + 30;
+        break;
+      case 11:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31;
+        break;
+      case 12:
+        sum = sum + 1 + 31 + 28 + r + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 ;
+        break;
+    }
+  }
+  switch (sum % 7) {
+    case 0:
+      console.log(0);
+      break;
+    case 1:
+      console.log(1);
+      break;
+    case 2:
+      console.log(2);
+      break;
+    case 3:
+      console.log(3);
+      break;
+    case 4:
+      console.log(4);
+      break;
+    case 5:
+      console.log(5);
+      break;
+    case 6:
+      console.log(6);
+      break;
+  }
+
 
 </script>
 
