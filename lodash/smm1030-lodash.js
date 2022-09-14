@@ -38,6 +38,18 @@ var smm1030 = {
       array[i] = value
     }
     return array
+  },
+
+  drop: function (array, n = 1) {
+    var len = array.length
+    var arr = []
+    if (n >= len) {
+      return arr
+    }
+    for (var i = n; i < len; i++) {
+      arr.push(array[i])
+    }
+    return arr
   }
 
 }
