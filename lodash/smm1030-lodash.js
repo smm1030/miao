@@ -3,18 +3,19 @@ var smm1030 = {
     var len = array.length
     var result = []
     var count = 0
+    var arr = []
     for (var i = 0; i < len; i++) {
-      var arr = []
       count++
-      if (count <= 3) {
+      if (count <= size) {
         arr.push(array[i])
       }
-      if (count = 3) {
-        result.push(result)
+      if (count == size) {
+        result.push(arr)
         count = 0
+        arr = []
       }
     }
-    if (count < 3) {
+    if (count > 0) {
       result.push(arr)
     }
     return result
