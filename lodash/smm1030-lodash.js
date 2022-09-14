@@ -26,7 +26,7 @@ var smm1030 = {
     var result = []
     for (var i = 0; i < len; i++) {
       var a = array[i]
-      if (a !== false && a !== null && a !== 0 && a !== '' && a !== undefined && typeof (a) !== 'NaN') {
+      if (a !== false && a !== null && a !== 0 && a !== '' && a !== undefined && a == a) {
         result.push(a)
       }
     }
