@@ -59,7 +59,13 @@ var smm1030 = function() {
   indexOf: function indexOf(array, value, fromIndex = 0) {
     var len = array.length
     if (fromIndex < 0) {
-      for (var i = len - 1; i >= 0; i--) {
+      var abs = Math.abs(fromIndex)
+      if (abs >= len) {
+        var i = 0
+      } else {
+        var i = len - abs
+      }
+      for (; i >= 0; i--) {
         if (value == array[i]) {
           return i
         }
@@ -82,6 +88,34 @@ var smm1030 = function() {
     }
     return -1
   }
+
+  initial: function initial(array) {
+    array.pop()
+    return array
+  }
+
+  join: function join(array, separator = ',') {
+    var len = array.length
+    var result = ''
+    result = result + array[0]
+    for (var i = 1; i < len; i++) {
+      result = result + separator + array[i]
+    }
+    return result
+  }
+
+  last: function last(array) {
+    return array[array.length - 1]
+  }
+
+  pull: function pull(array,...value) {
+    for (var i = 0; i < array.length; i++) {
+      if (array[i] == value) {
+        array.splice(i,1)
+      }
+    }
+    return array
+  }
   return {
     chunk,
     compact,
@@ -90,6 +124,9 @@ var smm1030 = function() {
     head,
     indexOf,
     lastIndexOf,
-
+    initial,
+    join,
+    last,
+    pull,
   }
 }()
