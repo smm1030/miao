@@ -1,5 +1,5 @@
-var smm1030 = {
-  chunk: function (array, size = 1) {
+var smm1030 = function() {
+  chunk: function chunk(array, size = 1) {
     var len = array.length
     var result = []
     var count = 0
@@ -19,9 +19,9 @@ var smm1030 = {
       result.push(arr)
     }
     return result
-  },
+  }
 
-  compact: function (array) {
+  compact: function compact(array) {
     var len = array.length
     var result = []
     for (var i = 0; i < len; i++) {
@@ -31,16 +31,16 @@ var smm1030 = {
       }
     }
     return result
-  },
+  }
 
-  fill: function (array, value, start = 0, end = array.length) {
+  fill: function fill(array, value, start = 0, end = array.length) {
     for (var i = start; i < end; i++) {
       array[i] = value
     }
     return array
-  },
+  }
 
-  drop: function (array, n = 1) {
+  drop: function drop(array, n = 1) {
     var len = array.length
     var arr = []
     if (n >= len) {
@@ -52,4 +52,44 @@ var smm1030 = {
     return arr
   }
 
-}
+  head: function head(array) {
+    return array[0]
+  }
+
+  indexOf: function indexOf(array, value, fromIndex = 0) {
+    var len = array.length
+    if (fromIndex < 0) {
+      for (var i = len - 1; i >= 0; i--) {
+        if (value == array[i]) {
+          return i
+        }
+      }
+      return -1
+    }
+    for (var i = fromIndex; i <len; i++) {
+      if (value == array[i]) {
+        return i
+      }
+    }
+    return -1
+  }
+
+  lastIndexOf: function lastIndexOf(array, value, fromIndex = array.length - 1) {
+    for (var i = fromIndex; i >= 0; i--) {
+      if (value == array[i]) {
+        return i
+      }
+    }
+    return -1
+  }
+  return {
+    chunk,
+    compact,
+    fill,
+    drop,
+    head,
+    indexOf,
+    lastIndexOf,
+
+  }
+}()
