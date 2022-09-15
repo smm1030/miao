@@ -115,9 +115,9 @@ var smm1030 = function() {
   }
 
   pull: function pull(array,...value) {
-    for (var i = 0; i < array.length; i++) {
-      for (var j = 0; j < arguments.length; j++) {
-        value = arguments[j]
+    for (var j = 0; j < arguments.length; j++) {
+      value = arguments[j]
+      for (var i = 0; i < array.length; i++) {
         if (array[i] == value) {
           array.splice(i,1)
         }
@@ -134,6 +134,8 @@ var smm1030 = function() {
       var left = array[i]
       array[i] = array[j]
       array[j] = left
+      i++
+      j--
     }
     return array
   }
