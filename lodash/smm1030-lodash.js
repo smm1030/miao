@@ -218,6 +218,14 @@ var smm1030 = function() {
     }
     return result
   }
+
+  nth: function nth(array, n = 0) {
+    var len = array.length
+    if (n < 0) {
+      return array[len + n]
+    }
+    return array[n]
+  }
   every: function every(){}
   return {
     chunk,
@@ -238,5 +246,7 @@ var smm1030 = function() {
     intersection,
     sortedIndex,
     uniq,
+    nth,
+
   }
 }()
