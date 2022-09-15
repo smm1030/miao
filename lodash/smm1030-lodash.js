@@ -167,6 +167,47 @@ var smm1030 = function() {
     }
     return array
   }
+
+  intersection: function intersection(...array) {
+    var arr = arguments[0]
+    var len = arr.length
+    var result = []
+    var arrlen = arguments.length
+    for (var i = 0; i < len; i++) {
+      var a = arr[i]
+      var flag = true
+      for (var j = 1; j < arrlen; j++) {
+        var arrAfter = arguments[j]
+        if (!(a in arrAfter)) {
+          flag = false
+          break
+        }
+      }
+      if (flag) {
+        result.push(a)
+      }
+    }
+    return result
+  }
+
+  sortedIndex: function sortedIndex(array, value) {
+    var len = array.length
+    if (array[0] <= array[len - 1]) {
+      for (var i = 0; i < len; i++) {
+        if (value <= array[i]) {
+          return i
+        }
+      }
+      return len
+    } else {
+      for (var i = 0; i < len; i++) {
+        if (value >= array[i]) {
+          return i
+        }
+      }
+      return len
+    }
+  }
   every: function every(){}
   return {
     chunk,
@@ -183,7 +224,8 @@ var smm1030 = function() {
     reverse,
     every,
     difference,
-    dropRight
-
+    dropRight,
+    intersection,
+    sortedIndex,
   }
 }()
