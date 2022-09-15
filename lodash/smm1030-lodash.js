@@ -226,6 +226,20 @@ var smm1030 = function() {
     }
     return array[n]
   }
+
+  pullAll: function pullAll(array, values) {
+    var len2 = values.length
+    for (var i = 0; i < len2; i++) {
+      var len1 = array.length
+      var a = values[i]
+      for (j = 0; j < len1; j++) {
+        if (a == array[j]) {
+          array.splice(j, 1)
+        }
+      }
+    }
+    return array
+  }
   every: function every(){}
   return {
     chunk,
@@ -247,6 +261,7 @@ var smm1030 = function() {
     sortedIndex,
     uniq,
     nth,
+    pullAll,
 
   }
 }()
