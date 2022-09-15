@@ -62,15 +62,21 @@ var smm1030 = function() {
       var abs = Math.abs(fromIndex)
       if (abs >= len) {
         var i = 0
+        for (; i < len; i++) {
+          if (value == array[i]) {
+            return i
+          }
+        }
+        return -1
       } else {
         var i = len - abs
-      }
-      for (; i >= 0; i--) {
-        if (value == array[i]) {
-          return i
+        for (; i >= 0; i--) {
+          if (value == array[i]) {
+            return i
+          }
         }
+        return -1
       }
-      return -1
     }
     for (var i = fromIndex; i <len; i++) {
       if (value == array[i]) {
@@ -110,12 +116,29 @@ var smm1030 = function() {
 
   pull: function pull(array,...value) {
     for (var i = 0; i < array.length; i++) {
-      if (array[i] == value) {
-        array.splice(i,1)
+      for (var j = 0; j < arguments.length; j++) {
+        value = arguments[j]
+        if (array[i] == value) {
+          array.splice(i,1)
+        }
       }
     }
     return array
   }
+
+  reverse: function reverse(array) {
+    var len = array.length
+    var i = 0
+    var j = len - 1
+    while (i < j) {
+      var left = array[i]
+      array[i] = array[j]
+      array[j] = left
+    }
+    return array
+  }
+
+  every: function every(){}
   return {
     chunk,
     compact,
@@ -128,5 +151,7 @@ var smm1030 = function() {
     join,
     last,
     pull,
+    reverse,
+    every,
   }
 }()
