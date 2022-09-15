@@ -140,6 +140,33 @@ var smm1030 = function() {
     return array
   }
 
+  difference: function difference(array, ...value) {
+    var arr = []
+    for (var i = 0; i < array.length; i++) {
+      for (var j = 0; j < arguments.length; j++) {
+        value = arguments[j]
+        var flag = true
+        if (array[i] == value) {
+          flag = false
+          break
+        }
+      }
+      if (flag) {
+        arr.push(array[i])
+      }
+    }
+    return arr
+  }
+
+  dropRight: function dropRight(array, n = 1) {
+    if (n >= array.length) {
+      return []
+    }
+    for (var i = 0; i < n; i++) {
+      array.pop()
+    }
+    return array
+  }
   every: function every(){}
   return {
     chunk,
@@ -155,5 +182,8 @@ var smm1030 = function() {
     pull,
     reverse,
     every,
+    difference,
+    dropRight
+
   }
 }()
