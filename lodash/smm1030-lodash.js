@@ -208,6 +208,16 @@ var smm1030 = function() {
       return len
     }
   }
+
+  uniq: function uniq(array) {
+    var result = []
+    for (var i = 0; i < array.length; i++) {
+      if (!result.includes(array[i])) {
+        result.push(array[i])
+      }
+    }
+    return result
+  }
   every: function every(){}
   return {
     chunk,
@@ -227,5 +237,6 @@ var smm1030 = function() {
     dropRight,
     intersection,
     sortedIndex,
+    uniq,
   }
 }()
