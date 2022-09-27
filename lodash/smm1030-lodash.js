@@ -142,17 +142,21 @@ var smm1030 = function() {
 
   difference: function difference(array, ...value) {
     var arr = []
-    for (var i = 0; i < array.length; i++) {
-      for (var j = 0; j < arguments.length; j++) {
-        value = arguments[j]
-        var flag = true
-        if (array[i] == value) {
+    var len = value.length
+    var result = []
+    result = result.concat(...value)
+    for (var j = 0; j < array.length; j++) {
+      var flag = true
+      var arrnum = array[j]
+      for (var k = 0; k < result.length; k++) {
+        var num = result[k]
+        if (array[j] == num) {
           flag = false
           break
         }
       }
       if (flag) {
-        arr.push(array[i])
+        arr.push(array[j])
       }
     }
     return arr
@@ -240,6 +244,10 @@ var smm1030 = function() {
     }
     return array
   }
+
+  sortedIndexOf: function sortedIndexOf(array, value) {
+
+  }
   every: function every(){}
   return {
     chunk,
@@ -262,6 +270,6 @@ var smm1030 = function() {
     uniq,
     nth,
     pullAll,
-
+    sortedIndexOf,
   }
 }()
