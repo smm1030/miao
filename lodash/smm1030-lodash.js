@@ -248,7 +248,35 @@ var smm1030 = function() {
   sortedIndexOf: function sortedIndexOf(array, value) {
 
   }
-  every: function every(){}
+  every: function every() { }
+  max: function max(array) {
+    var len = array.length
+    if (len == 0) {
+      return undefined
+    }
+    var max = array[0]
+    for (var i = 1; i < len; i++) {
+      var num = array[i]
+      if (num > max) {
+        max = num
+      }
+    }
+    return max
+  }
+  min: function min(array) {
+    var len = array.length
+    if (len == 0) {
+      return undefined
+    }
+    var min = array[0]
+    for (var i = 1; i < len; i++) {
+      var num = array[i]
+      if (min > num) {
+        min = num
+      }
+    }
+    return min
+  }
   return {
     chunk,
     compact,
@@ -271,5 +299,8 @@ var smm1030 = function() {
     nth,
     pullAll,
     sortedIndexOf,
+    max,
+    min,
+    
   }
 }()
