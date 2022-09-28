@@ -393,6 +393,23 @@ var smm1030 = function() {
     }
     return result
   }
+  zip: function zip(...arrays) {
+    var len1 = arrays.length
+    var len2 = arrays[0].length
+    var result = []
+    for (var i = 0; i < len2; i++) {
+      var arr = []
+      for (var j = 0; j < len1; j++){
+
+        var tempArr = arrays[j]
+        var num = tempArr[i]
+        arr.push(num)
+      }
+      result.push(arr)
+
+    }
+    return result
+  }
   return {
     chunk,
     compact,
@@ -423,7 +440,8 @@ var smm1030 = function() {
     unzip,
     without,
     xor,
-    
+    zip,
+
 
   }
 }()
