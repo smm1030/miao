@@ -277,6 +277,19 @@ var smm1030 = function() {
     }
     return min
   }
+  union: function union(...array) {
+    var arr = []
+    arr = arr.concat(...array)
+    var len = arr.length
+    var result = []
+    for (var i = 0; i < len; i++) {
+      var num = arr[i]
+      if (!(result.includes(num))) {
+        result.push(num)
+      }
+    }
+    return result
+  }
   return {
     chunk,
     compact,
@@ -301,6 +314,7 @@ var smm1030 = function() {
     sortedIndexOf,
     max,
     min,
-    
+    union,
+
   }
 }()
