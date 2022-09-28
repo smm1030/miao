@@ -246,6 +246,52 @@ var smm1030 = function() {
   }
 
   sortedIndexOf: function sortedIndexOf(array, value) {
+    var len = array.length
+    var left = 0
+    var right = len - 1
+    var leftNum = array[left]
+    var rightNum = array[right]
+
+    if ((value > leftNum && value > rightNum) || (value < leftNum && value < rightNum)) {
+      return -1
+    }
+    if (leftNum == rightNum) {
+      if (value == leftNum) {
+        return 0
+      } else {
+        return -1
+      }
+    }
+    if (leftNum < rightNum) {
+      while (left < right) {
+        var mid = Math.floor((left + right) / 2)
+        if (value > array[mid]) {
+          left = mid + 1
+        } else {
+          right = mid
+        }
+      }
+      if (array[left] == value) {
+        return left
+      } else {
+        return -1
+      }
+    }
+    if (leftNum > rightNum) {
+      while (left < right) {
+        var mid = Math.floor((left + right) / 2)
+        if (value > array[mid]) {
+          right = mid - 1
+        } else {
+          left = mid
+        }
+      }
+      if (array[left] == value) {
+        return left
+      } else {
+        return -1
+      }
+    }
 
   }
   every: function every() { }
