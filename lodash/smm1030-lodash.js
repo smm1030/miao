@@ -408,6 +408,54 @@ var smm1030 = function() {
     }
     return result
   }
+  sortedLastIndexOf: function sortedLastIndexOf(array, value) {
+    var len = array.length
+    var left = 0
+    var right = len - 1
+    var leftNum = array[left]
+    var rightNum = array[right]
+
+    if ((value > leftNum && value > rightNum) || (value < leftNum && value < rightNum)) {
+      return -1
+    }
+    if (leftNum == rightNum) {
+      if (value == leftNum) {
+        return right
+      } else {
+        return -1
+      }
+    }
+    if (leftNum < rightNum) {
+      while (left < right) {
+        var mid = Math.ceil((left + right) / 2)
+        if (value >= array[mid]) {
+          left = mid
+        } else {
+          right = mid
+        }
+      }
+      if (array[left] == value) {
+        return left
+      } else {
+        return -1
+      }
+    }
+    if (leftNum > rightNum) {
+      while (left < right) {
+        var mid = Math.ceil((left + right) / 2)
+        if (value > array[mid]) {
+          right = mid - 1
+        } else {
+          left = mid
+        }
+      }
+      if (array[left] == value) {
+        return left
+      } else {
+        return -1
+      }
+    }
+  }
   return {
     chunk,
     compact,
@@ -439,6 +487,7 @@ var smm1030 = function() {
     without,
     xor,
     zip,
+    sortedLastIndexOf,
 
 
   }
