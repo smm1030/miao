@@ -182,7 +182,7 @@ var smm1030 = function() {
       var flag = true
       for (var j = 1; j < arrlen; j++) {
         var arrAfter = arguments[j]
-        if (!(a in arrAfter)) {
+        if (!(arrAfter.includes(a))) {
           flag = false
           break
         }
