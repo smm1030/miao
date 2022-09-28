@@ -354,6 +354,23 @@ var smm1030 = function() {
     }
     return result
   }
+  unzip: function unzip(array) {
+    var len1 = array.length
+    var result = []
+    var len2 = array[0].length
+    for (var i = 0; i < len2; i++) {
+      var arr = []
+      for (var j = 0; j < len1; j++) {
+        var tempArr = array[j]
+        arr.push(tempArr[i])
+      }
+      result.push(arr)
+    }
+    return result
+  }
+  without: function without(array, ...values) {
+    
+  }
   return {
     chunk,
     compact,
@@ -381,6 +398,8 @@ var smm1030 = function() {
     union,
     sortedLastIndex,
     sortedUniq,
+    unzip,
+    without,
 
   }
 }()
