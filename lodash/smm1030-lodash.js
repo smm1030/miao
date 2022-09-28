@@ -464,7 +464,17 @@ var smm1030 = function() {
     }
   }
   flatten: function flatten(array) {
-    var result = [...array]
+    var len = array.length
+    var result = []
+    for (var i = 0; i < len; i++) {
+      var item = array[i]
+      if (typeof item == 'number') {
+        result.push(item)
+      } else {
+
+        result = result.concat(item)
+      }
+    }
     return result
   }
   return {
