@@ -344,6 +344,16 @@ var smm1030 = function() {
       }
     }
   }
+  sortedUniq: function sortedUniq(array) {
+    var len = array.length
+    var result = []
+    for (var i = 0; i < len; i++) {
+      if ( !(result.includes(arr[i])) ) {
+        result.push(arr[i])
+      }
+    }
+    return result
+  }
   return {
     chunk,
     compact,
@@ -370,6 +380,7 @@ var smm1030 = function() {
     min,
     union,
     sortedLastIndex,
+    sortedUniq,
 
   }
 }()
