@@ -369,7 +369,15 @@ var smm1030 = function() {
     return result
   }
   without: function without(array, ...values) {
-    
+    var len = array.length
+    var result = []
+    for (var i = 0; i < len; i++) {
+      var num = array[i]
+      if (!(values.includes(num))) {
+        result.push(num)
+      }
+    }
+    return result
   }
   return {
     chunk,
