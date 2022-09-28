@@ -348,8 +348,8 @@ var smm1030 = function() {
     var len = array.length
     var result = []
     for (var i = 0; i < len; i++) {
-      if ( !(result.includes(arr[i])) ) {
-        result.push(arr[i])
+      if ( !(result.includes(array[i])) ) {
+        result.push(array[i])
       }
     }
     return result
