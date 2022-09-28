@@ -336,6 +336,14 @@ var smm1030 = function() {
     }
     return result
   }
+  sortedLastIndex: function sortedLastIndex(array, value) {
+    var len = array.length
+    for (var i = len - 1; i >= 0; i--) {
+      if (array[i] == value) {
+        return i
+      }
+    }
+  }
   return {
     chunk,
     compact,
@@ -361,6 +369,7 @@ var smm1030 = function() {
     max,
     min,
     union,
+    sortedLastIndex,
 
   }
 }()
