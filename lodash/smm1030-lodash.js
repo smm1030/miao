@@ -431,7 +431,7 @@ var smm1030 = function() {
         if (value >= array[mid]) {
           left = mid
         } else {
-          right = mid
+          right = mid - 1
         }
       }
       if (array[left] == value) {
