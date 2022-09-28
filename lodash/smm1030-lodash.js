@@ -384,11 +384,9 @@ var smm1030 = function() {
     arr = result.concat(...arrays)
     var len = arr.length
     for (var i = len - 1; i >= 0; i++) {
-      var num = arr.pop()
+      var num = arr[i]
       if ( !(arr.includes(num)) ) {
         result.push(num)
-      } else {
-        arr.push(num)
       }
     }
     return result
