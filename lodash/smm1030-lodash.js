@@ -379,6 +379,20 @@ var smm1030 = function() {
     }
     return result
   }
+  xor: function xor(...arrays) {
+    var result = []
+    arr = result.concat(...arrays)
+    var len = arr.length
+    for (var i = len - 1; i >= 0; i++) {
+      var num = arr.pop()
+      if ( !(arr.includes(num)) ) {
+        result.push(num)
+      } else {
+        arr.push(num)
+      }
+    }
+    return result
+  }
   return {
     chunk,
     compact,
@@ -408,6 +422,8 @@ var smm1030 = function() {
     sortedUniq,
     unzip,
     without,
+    xor,
+    
 
   }
 }()
