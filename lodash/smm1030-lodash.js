@@ -380,14 +380,20 @@ var smm1030 = function() {
     return result
   }
   xor: function xor(...arrays) {
+    var arr = []
     var result = []
-    arr = result.concat(...arrays)
+    arr = arr.concat(...arrays)
     var len = arr.length
-    for (var i = len - 1; i >= 0; i--) {
-      var num = arr.pop()
-      if ( !(arr.includes(num)) ) {
-        result.push(num)
-        arr.push(num)
+    for (var i = 0; i < len; i++) {
+      var flag = true
+      for (var j = 0; j < len ; j++) {
+        if (arr[j] == arr[i] && j !== i) {
+          flag = false
+          break
+        }
+      }
+      if (flag) {
+        result.push(arr[i])
       }
     }
     return result
@@ -494,7 +500,7 @@ var smm1030 = function() {
     zip,
     sortedLastIndexOf,
     flatten,
-    
+
 
   }
 }()
