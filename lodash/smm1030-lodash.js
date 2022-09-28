@@ -457,6 +457,10 @@ var smm1030 = function() {
       }
     }
   }
+  flatten: function flatten(array) {
+    var result = [...array]
+    return result
+  }
   return {
     chunk,
     compact,
@@ -489,7 +493,8 @@ var smm1030 = function() {
     xor,
     zip,
     sortedLastIndexOf,
-
+    flatten,
+    
 
   }
 }()
