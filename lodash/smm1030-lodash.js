@@ -514,6 +514,26 @@ var smm1030 = function() {
     }
     return arr
   }
+  flattenDeep: function flattenDeep(array) {
+    var len = array.length
+    var arr = []
+    for (var i = 0; i < len; i++) {
+      var num = array[i]
+      while (Array.isArray(num)) {
+        num = flatten(num)
+      }
+      arr.concat(num)
+    }
+    return arr
+  }
+  fromPairs: function fromPairs(array) {
+    var len = array.length
+    var obj = {}
+    for (var i = 0; i < len; i++) {
+      obj[array[i][0]] = array[i][1]
+    }
+    return obj
+  }
   return {
     chunk,
     compact,
@@ -548,6 +568,8 @@ var smm1030 = function() {
     sortedLastIndexOf,
     flatten,
     differenceBy,
+    flattenDeep,
+    fromPairs,
 
 
   }
