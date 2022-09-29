@@ -477,6 +477,31 @@ var smm1030 = function() {
     }
     return result
   }
+  differenceBy: function differenceBy(array, ...values) {
+    var len = values.length
+    if (Array.isArray(values[len - 1])) {
+      return difference(array,...values)
+    }
+    var f = values.pop()
+    var arr = []
+    var result = []
+    result = result.concat(...values)
+    for (var j = 0; j < array.length; j++) {
+      var flag = true
+      var arrnum = f.call( array, array[j])
+      for (var k = 0; k < result.length; k++) {
+        var num = f.call( result, result[k])
+        if (array[j] == num) {
+          flag = false
+          break
+        }
+      }
+      if (flag) {
+        arr.push(array[j])
+      }
+    }
+    return arr
+  }
   return {
     chunk,
     compact,
@@ -510,6 +535,7 @@ var smm1030 = function() {
     zip,
     sortedLastIndexOf,
     flatten,
+    differenceBy,
 
 
   }
