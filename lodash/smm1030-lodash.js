@@ -483,14 +483,26 @@ var smm1030 = function() {
       return difference(array,...values)
     }
     var f = values.pop()
+    var flag2 = (typeof f == 'string')
     var arr = []
     var result = []
     result = result.concat(...values)
     for (var j = 0; j < array.length; j++) {
       var flag = true
-      var arrnum = f.call( array, array[j])
+      if (flag2) {
+        var arrnum = array[i][f]
+      } else {
+
+        var arrnum = f.call( array, array[j])
+      }
       for (var k = 0; k < result.length; k++) {
-        var num = f.call( result, result[k])
+        if (flag2) {
+        var num = result[k][f]
+
+        } else {
+
+          var num = f.call( result, result[k])
+        }
         if (array[j] == num) {
           flag = false
           break
