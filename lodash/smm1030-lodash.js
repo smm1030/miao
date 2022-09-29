@@ -534,6 +534,9 @@ var smm1030 = function() {
     }
     return obj
   }
+  tail: function tail(array) {
+    return tail.shift()
+  }
   return {
     chunk,
     compact,
@@ -570,6 +573,7 @@ var smm1030 = function() {
     differenceBy,
     flattenDeep,
     fromPairs,
+    tail,
 
 
   }
