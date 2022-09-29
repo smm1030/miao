@@ -490,7 +490,7 @@ var smm1030 = function() {
     for (var j = 0; j < array.length; j++) {
       var flag = true
       if (flag2) {
-        var arrnum = array[i][f]
+        var arrnum = array[j][f]
       } else {
 
         var arrnum = f.call( array, array[j])
@@ -503,7 +503,7 @@ var smm1030 = function() {
 
           var num = f.call( result, result[k])
         }
-        if (array[j] == num) {
+        if (arrnum == num) {
           flag = false
           break
         }
