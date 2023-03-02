@@ -537,6 +537,14 @@ var smm1030 = function() {
   tail: function tail(array) {
     return tail.shift()
   }
+  take: function take(array, n = 1) {
+    var len = array.length
+    if (n >= length) {
+      return array
+    } else if (len ) {
+
+    }
+  }
   return {
     chunk,
     compact,
@@ -574,6 +582,7 @@ var smm1030 = function() {
     flattenDeep,
     fromPairs,
     tail,
+    take,
 
 
   }
